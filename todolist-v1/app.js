@@ -11,7 +11,7 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 //mongoose.connect('mongodb://localhost:27017/itemsDB');
-mongoose.connect('mongodb+srv://kdc392:<PASSWORD>@cs-312.1old5sc.mongodb.net/itemsDB');
+mongoose.connect('mongodb+srv://kdc392:<PASSWORD>@<mongodbpath>');
 
 const itemsSchema = new mongoose.Schema ({
   name: String
@@ -140,3 +140,4 @@ if (port == null || port == ''){
 app.listen(port, function(){
   console.log('Server has started');
 });
+
